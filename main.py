@@ -26,6 +26,7 @@ class LexemeAnalyzer:
 
                 elif postfix and "." in postfix[-1] \
                         and (expression[idx-1].isdigit() or expression[idx-1] == "."):  # 소수점
+                    # Todo: 1.2.3
                     postfix[-1] += char
 
                 elif stack and "-" == stack[-1] and not expression[idx-2].isdigit():    # 뺄셈 아닌 음수
@@ -123,7 +124,7 @@ class PostfixCalculator:
 if __name__ == '__main__':
     calculator = PostfixCalculator()
     analyzer = LexemeAnalyzer()
-    input_txt = "1 +"
+    input_txt = "1.1.1 + 2"
     print(f"equation : {input_txt}")
     print(f"postfix : {analyzer.lex(input_txt)}")
     print(f"result : {calculator.calculate(input_txt)}")

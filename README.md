@@ -46,3 +46,19 @@
       4. 현재 연산자가 / 인 경우 => a / b 
    2. 현재 글자가 피연산자인 경우
       - float 형태로 변환 후 stack 에 추가
+
+- lexer의 역할
+  - valid 한지 판별하는 함수
+    - token이 valid한지
+- parser
+  - 수식이 valid한지
+
+수식이 들어왔을때
+    1. 이 수식과 토큰이 valid한가?
+    2. 계산?
+
+- CFG와 연산자 우선순위, 모호성(- BNF)
+- recursive dependency parser
+```python
+
+```
